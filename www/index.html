@@ -16,7 +16,9 @@
         }
 
     function testCors() { 
-      	xhr.get('http://localhost:8080/FilterExample/Servlet',{}).then(function (data) {
+      	xhr.get('http://localhost:8080/FilterExample/Servlet',{},{
+      		'Content-Type':'application/x-www-form-urlencoded'
+      	}).then(function (data) {
               console.log(data,'GET');
           });
     }
